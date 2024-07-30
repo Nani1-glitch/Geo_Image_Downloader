@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geographical Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Geographical Prediction</h1>
+        <img id="uploaded-image" src="" alt="Uploaded Image">
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="image" name="image" accept="image/*" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="prediction-result"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>
+        var animation = lottie.loadAnimation({
+            container: document.getElementById('lottie-animation'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://assets9.lottiefiles.com/packages/lf20_Stt1R5.json' // Path to the animation JSON file
+        });
+    </script>
+</body>
+</html>
